@@ -1,0 +1,12 @@
+{
+  "Earthquake": 2.0,
+  "Wildfire": 14.0,
+  "Flood": 5.0,
+  "Storm": 12.0,
+  "Extreme temperature ": 4.0,
+  "Drought": 1.0,
+  "Landslide": 10.0,
+  "Volcanic activity": 13.0,
+  "Insect infestation": 9.0,
+  "Epidemic": 3.0
+}
