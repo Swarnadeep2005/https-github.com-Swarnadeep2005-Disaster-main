@@ -845,7 +845,8 @@ export default function LandingPage() {
       className="min-h-screen bg-[#050a0e] text-white antialiased"
       style={{ fontFamily: "'DM Mono', 'Fira Code', monospace" }}
     >
-      <style>{`
+      <style dangerouslySetInnerHTML={{
+        __html: `
         * { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Sora:wght@400;600;700;800;900&display=swap');
@@ -853,7 +854,8 @@ export default function LandingPage() {
         body { font-family: 'DM Mono', monospace; }
         @keyframes slide-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
         .animate-in { animation: slide-in 0.3s ease forwards; }
-      `}</style>
+      `
+      }} />
       <Hero />
       <Problem />
       <Dataset />

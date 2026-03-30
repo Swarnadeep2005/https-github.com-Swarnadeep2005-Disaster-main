@@ -3,7 +3,6 @@ import pandas as pd
 import json
 
 model = joblib.load("model/random_forest_model.joblib")
-scaler = joblib.load("model/scaler.joblib")
 
 # Load mapping
 with open("model/disaster_mapping.json") as f:
@@ -24,9 +23,8 @@ def predict_disaster(data):
         "Latitude": data["Latitude"]
     }])
 
-    # Scale the features before prediction
-    df_scaled = scaler.transform(df)
-    prediction = int(model.predict(df_scaled)[0])
+    # Pass raw features directly to model; Random forests do not need scaled inputs limit
+    prediction = int(model.predict(df)[0])
 
     disaster_name = id_to_disaster.get(prediction, "Unknown")
 

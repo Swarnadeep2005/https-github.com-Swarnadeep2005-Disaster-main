@@ -398,7 +398,8 @@ export default function PredictPage() {
     setError(null);
 
     try {
-      const res = await fetch("http://localhost:8000/predict", {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const res = await fetch(`${API_URL}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

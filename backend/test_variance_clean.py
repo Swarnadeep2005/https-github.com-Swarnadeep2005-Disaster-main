@@ -3,7 +3,7 @@ warnings.filterwarnings('ignore')
 
 import joblib
 import pandas as pd
-from app.predictor import id_to_disaster, model, scaler
+from app.predictor import id_to_disaster, model
 import random
 
 def test_various():
@@ -20,10 +20,7 @@ def test_various():
         
         pred_unscaled = int(model.predict(df)[0])
         
-        df_scaled = scaler.transform(df)
-        pred_scaled = int(model.predict(df_scaled)[0])
-        
-        print(f"Test {i}: Unscaled={id_to_disaster.get(pred_unscaled)} | Scaled={id_to_disaster.get(pred_scaled)}")
+        print(f"Test {i}: Prediction={id_to_disaster.get(pred_unscaled)}")
 
 if __name__ == '__main__':
     test_various()

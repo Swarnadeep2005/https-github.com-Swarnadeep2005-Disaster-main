@@ -25,6 +25,11 @@ export default function MapSelector({
     const init = async () => {
       const L = (await import("leaflet")).default;
 
+      // Prevent double initialization from React Strict Mode race condition
+      if (mapInstanceRef.current || (mapRef.current && mapRef.current._leaflet_id)) {
+        return;
+      }
+
       // Fix default marker icons
       delete L.Icon.Default.prototype._getIconUrl;
       L.Icon.Default.mergeOptions({

@@ -1,12 +1,16 @@
 {
-  "Earthquake": 2.0,
-  "Wildfire": 14.0,
-  "Flood": 5.0,
-  "Storm": 12.0,
-  "Extreme temperature ": 4.0,
-  "Drought": 1.0,
-  "Landslide": 10.0,
-  "Volcanic activity": 13.0,
-  "Insect infestation": 9.0,
-  "Epidemic": 3.0
+    "Animal accident": 0,
+    "Drought": 1,
+    "Earthquake": 2,
+    "Epidemic": 3,
+    "Extreme temperature ": 4,
+    "Flood": 5,
+    "Glacial lake outburst": 6,
+    "Impact": 7,
+    "Insect infestation": 8,
+    "Landslide": 9,
+    "Mass movement (dry)": 10,
+    "Storm": 11,
+    "Volcanic activity": 12,
+    "Wildfire": 13
 }
