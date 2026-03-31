@@ -5,16 +5,10 @@ from app.predictor import predict_disaster
 
 app = FastAPI(title="Disaster Prediction API")
 
-# Allow frontend to access backend
-origins = [
-    "http://localhost:3000",
-    "https://disaster-wheat-eight.vercel.app",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
